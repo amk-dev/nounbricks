@@ -1,7 +1,50 @@
 <script setup>
-    import FullNoun from "../../src/components/FullNoun.vue"
+import FullNounWithBackground from "./../examples/FullNounWithBackground.vue"
+import FullNounWithoutBackground from "./../examples/FullNounWithoutBackground.vue"
+import FullNounFitBounds from "./../examples/FullNounFitBounds.vue"
 </script>
 
-# FullNoun Component
+# FullNoun
 
-<FullNoun  />
+Use this component to render a full noun
+
+## FullNoun with background
+
+```html
+<FullNoun
+  body="bege-crt"
+  head="ape"
+  accessories="bird-side"
+  glasses="square-black-rgb"
+  bg-color="d5d7e1"
+></FullNoun>
+```
+
+<FullNounWithBackground />
+
+## FullNoun without background
+
+```html
+<FullNoun
+  body="bege-crt"
+  head="ape"
+  accessories="bird-side"
+  glasses="square-black-rgb"
+></FullNoun>
+```
+
+<FullNounWithoutBackground />
+
+## FullNoun Fit Bounds
+
+```html
+<FullNoun
+  body="bege-crt"
+  head="ape"
+  accessories="bird-side"
+  glasses="square-black-rgb"
+  fit-to-bounds
+></FullNoun>
+```
+
+<FullNounFitBounds />

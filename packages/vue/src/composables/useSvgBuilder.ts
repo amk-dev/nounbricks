@@ -19,10 +19,10 @@ type Parts = {
 }[];
 
 export type Traits = {
-  head: HeadName;
-  glasses: GlassesName;
-  body: BodyName;
-  accessory: AccessoryName;
+  head?: HeadName;
+  glasses?: GlassesName;
+  body?: BodyName;
+  accessory?: AccessoryName;
 };
 
 type Writeable<T> = { -readonly [P in keyof T]: T[P] };
