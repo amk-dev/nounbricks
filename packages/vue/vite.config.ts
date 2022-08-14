@@ -8,7 +8,7 @@ export default defineConfig({
       entry: "src/index.ts",
       name: "nounbricks",
       fileName: "index",
-      formats: ["es"],
+      formats: ["es", "umd"],
     },
     rollupOptions: {
       external: ["vue"],

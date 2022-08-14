@@ -2,7 +2,9 @@
   "name": "@nounbricks/vue",
   "version": "0.0.0",
   "description": "Vue 3 component library for noun assets",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build --mode prod && vue-tsc --declaration --declarationDir dist/types --emitDeclarationOnly",
@@ -18,5 +20,11 @@
     "vue-tsc": "^0.38.4",
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.37"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Akash K"
   }
 }
