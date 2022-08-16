@@ -6,7 +6,7 @@
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "build": "vite build --mode prod && vue-tsc --declaration --declarationDir dist/types --emitDeclarationOnly",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -14,12 +14,15 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
+    "@testing-library/vue": "^6.6.1",
     "@vitejs/plugin-vue": "^3.0.0",
+    "jsdom": "^20.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
-    "vue-tsc": "^0.38.4",
     "vitepress": "^1.0.0-alpha.4",
-    "vue": "^3.2.37"
+    "vitest": "^0.21.1",
+    "vue": "^3.2.37",
+    "vue-tsc": "^0.38.4"
   },
   "files": [
     "dist"
