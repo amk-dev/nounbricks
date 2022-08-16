@@ -1,0 +1,228 @@
+// Vitest Snapshot v1
+
+exports[`NounAccessory > renders the NounAccessory with background 1`] = `
+<svg
+  height="320"
+  shape-rendering="crispEdges"
+  viewBox="0 0 320 320"
+  width="320"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    fill="#d5d7e1"
+    height="100%"
+    width="100%"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="300"
+  />
+</svg>
+`;
+
+exports[`NounAccessory > renders the NounAccessory without background 1`] = `
+<svg
+  height="320"
+  shape-rendering="crispEdges"
+  viewBox="0 0 320 320"
+  width="320"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="300"
+  />
+</svg>
+`;
+
+exports[`NounAccessory > renders with NounAccessory with bounds fit 1`] = `
+<svg
+  height="80"
+  shape-rendering="crispEdges"
+  viewBox="130 230 50 80"
+  width="50"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="230"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="250"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="160"
+    y="270"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="20"
+    x="130"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="160"
+    y="290"
+  />
+  <rect
+    fill="#c4da53"
+    height="10"
+    width="10"
+    x="140"
+    y="300"
+  />
+</svg>
+`;
