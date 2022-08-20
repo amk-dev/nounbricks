@@ -41,7 +41,7 @@
 import DefaultTheme from "vitepress/theme";
 import FullNoun from "./../../../src/components/FullNoun.vue";
 
-import VPButton from "vitepress/client/theme-default/components/VPButton.vue";
+import VPButton from "./VPButton.vue";
 
 import { useData } from "vitepress";
 
