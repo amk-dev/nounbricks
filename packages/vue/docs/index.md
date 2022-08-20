@@ -6,7 +6,7 @@ nounbricksHero:
   actions:
     - theme: brand
       text: Get Started
-      link: https://github.com/amk-dev/nounbricks
+      link: /guide/getting-started
     - theme: alt
       text: View On Github
       link: https://github.com/amk-dev/nounbricks
