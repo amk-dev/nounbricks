@@ -17,19 +17,10 @@ export default {
         ],
       },
       {
-        text: "Component Options",
         items: [
           {
-            text: "With background",
-            link: "/guide/component-options",
-          },
-          {
-            text: "Without background",
-            link: "/guide/component-options",
-          },
-          {
-            text: "Fit to bounds",
-            link: "/guide/component-options",
+            text: "Component Options",
+            link: "/guide/component-options.html",
           },
         ],
       },

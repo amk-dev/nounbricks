@@ -22,3 +22,10 @@ you can omit the `bg-color` prop to render a noun/noun trait without any backgro
 ## Fit to bounds
 
 normally nouns are rendered within a 320x320 square. mostly this leaves additional space which we might want to get rid of. in that situation you can use a `fit-to-bounds` prop and it should remove all the additional space.
+
+```vue-html
+<fullnoun
+    ...
+    fit-to-bounds
+/>
+```
