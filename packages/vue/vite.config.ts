@@ -11,7 +11,7 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts",
       name: "nounbricks",
-      fileName: "index",
+      fileName: (format) => `index.${format}.js`,
       formats: ["es", "umd"],
     },
     rollupOptions: {
