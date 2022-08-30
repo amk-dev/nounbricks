@@ -18,12 +18,19 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint --ext .js,.ts,.vue, --ignore-path ./../../.gitignore ./src",
+    "format": "prettier --ignore-path ./../../.gitignore ./src --check"
   },
   "devDependencies": {
     "@testing-library/vue": "^6.6.1",
     "@vitejs/plugin-vue": "^3.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.4.0",
     "jsdom": "^20.0.0",
+    "prettier": "2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
     "vitepress": "^1.0.0-alpha.9",
