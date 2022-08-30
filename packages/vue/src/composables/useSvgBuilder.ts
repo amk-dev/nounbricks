@@ -11,7 +11,7 @@ import {
   palette,
 } from "../data/ImageData";
 
-import { ref, computed, unref, Ref } from "vue";
+import { computed, unref, Ref } from "vue";
 
 type Parts = {
   filename: HeadName | GlassesName | BodyName | AccessoryName;

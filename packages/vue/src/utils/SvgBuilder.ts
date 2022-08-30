@@ -78,7 +78,9 @@ export const buildSVG = (
       let currentY = bounds.top;
 
       rects.forEach((draw) => {
-        let [drawLength, colorIndex] = draw;
+        let [drawLength] = draw;
+        const [colorIndex] = draw;
+
         const hexColor = paletteColors[colorIndex];
 
         let length = getRectLength(currentX, drawLength, bounds.right);
