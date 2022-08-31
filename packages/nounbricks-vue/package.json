@@ -1,6 +1,6 @@
 {
   "name": "@nounbricks/nounbricks-vue",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "Vue 3 component library for noun assets",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
