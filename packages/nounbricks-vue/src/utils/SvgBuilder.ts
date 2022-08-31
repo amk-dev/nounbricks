@@ -79,7 +79,7 @@ export const buildSVG = (
 
       rects.forEach((draw) => {
         let [drawLength] = draw;
-        const [colorIndex] = draw;
+        const [_, colorIndex] = draw;
 
         const hexColor = paletteColors[colorIndex];
 
