@@ -17,10 +17,10 @@ Nounbricks is currently under development and is not yet ready for production us
 Install the nounbricks npm package
 
 ```sh
-npm install @nounbricks/vue
+npm install @nounbricks/nounbricks-vue
 ```
 
-Import and use the components from `@nounbricks/vue` 🎉
+Import and use the components from `@nounbricks/nounbricks-vue` 🎉
 
 ```vue
 <template>
@@ -33,7 +33,7 @@ Import and use the components from `@nounbricks/vue` 🎉
 </template>
 
 <script setup>
-import { FullNoun } from "@nounbricks/vue";
+import { FullNoun } from "@nounbricks/nounbricks-vue";
 </script>
 ```
 
@@ -47,7 +47,7 @@ You can try out nounbricks components directly on the browser.
 <!-- load vue before loading nounbricks -->
 <script src="https://unpkg.com/vue@3"></script>
 <!-- import nounbricks from unpkg -->
-<script src="https://unpkg.com/@nounbricks/vue@0.1.0-alpha.2"></script>
+<script src="https://unpkg.com/@nounbricks/nounbricks-vue"></script>
 <script>
   const { FullNoun } = nounbricks;
   const { createApp } = Vue;
