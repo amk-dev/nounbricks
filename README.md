@@ -45,7 +45,7 @@ You can try out nounbricks components directly on the browser.
 <!-- load vue before loading nounbricks -->
 <script src="https://unpkg.com/vue@3"></script>
 <!-- import nounbricks from unpkg -->
-<script src="https://unpkg.com/@nounbricks/nounbricks-vue@0.1.0-alpha.2"></script>
+<script src="https://unpkg.com/@nounbricks/nounbricks-vue"></script>
 <script>
   const { FullNoun } = nounbricks;
   const { createApp } = Vue;
@@ -90,6 +90,19 @@ normally nouns are rendered within a 320x320 square. mostly this leaves addition
 <fullnoun ... fit-to-bounds />
 ```
 
+### Render as an IMG or SVG
+
+you might want to render the noun as an img instead of a full svg. this helps performance when rendering a lot of nouns together. in those scenarios you can use the `renderType` prop.
+
+the default value for renderType is `svg`
+
+```vue-html
+<fullnoun
+    ...
+    renderType="img"
+/>
+```
+
 ## Components
 
 ### FullNoun
@@ -131,6 +144,19 @@ Use this component to render a full noun
 ></FullNoun>
 ```
 
+#### FullNoun, Render as an IMG instead of SVG
+
+```html
+<FullNoun
+  body="bege-crt"
+  head="ape"
+  accessories="bird-side"
+  glasses="square-black-rgb"
+  bg-color="d5d7e1"
+  render-type="img"
+></FullNoun>
+```
+
 ### NounHead
 
 Use this component to render a noun head
@@ -151,6 +177,12 @@ Use this component to render a noun head
 
 ```html
 <NounHead head="bag" fit-to-bounds></NounHead>
+```
+
+#### NounHead, Render as an IMG instead of SVG
+
+```html
+<NounHead head="bag" bg-color="d5d7e1" render-type="img"></NounHead>
 ```
 
 ### NounGlasses
@@ -175,6 +207,12 @@ Use this component to render noun glasses
 <NounGlasses body="blue-sky" fit-to-bounds></NounGlasses>
 ```
 
+#### NounGlasses, Render as an IMG instead of SVG
+
+```html
+<NounGlasses glasses="grass" bg-color="d5d7e1" render-type="img"></NounGlasses>
+```
+
 ### NounBody
 
 Use this component to render a noun body
@@ -197,6 +235,12 @@ Use this component to render a noun body
 <NounBody body="blue-sky" fit-to-bounds></NounBody>
 ```
 
+#### NounBody, Render as an IMG instead of SVG
+
+```html
+<NounBody body="blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
+```
+
 ### NounAccessory
 
 Use this component to render a noun accessory
@@ -217,4 +261,14 @@ Use this component to render a noun accessory
 
 ```html
 <NounAccessory accessories="bling-anvil" fit-to-bounds></NounAccessory>
+```
+
+#### NounAccessory, Render as an IMG instead of SVG
+
+```html
+<NounAccessory
+  accessories="bling-anvil"
+  bg-color="e1d7d5"
+  render-type="img"
+></NounAccessory>
 ```
