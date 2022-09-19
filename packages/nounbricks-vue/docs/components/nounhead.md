@@ -15,7 +15,9 @@ Use this component to render a noun head
 <NounHead head="bag" bg-color="d5d7e1"></NounHead>
 ```
 
+<ClientOnly>
 <NounHeadWithBackground />
+</ClientOnly>
 
 ## NounHead without background
 
@@ -23,7 +25,9 @@ Use this component to render a noun head
 <NounHead head="bag"></NounHead>
 ```
 
+<ClientOnly>
 <NounHeadWithoutBackground />
+</ClientOnly>
 
 ## NounHead Fit Bounds
 
@@ -31,7 +35,9 @@ Use this component to render a noun head
 <NounHead head="bag" fit-to-bounds></NounHead>
 ```
 
+<ClientOnly>
 <NounHeadFitBounds />
+</ClientOnly>
 
 ## NounHead, Render as an IMG instead of SVG
 
@@ -39,4 +45,6 @@ Use this component to render a noun head
 <NounHead head="bag" bg-color="d5d7e1" render-type="img"></NounHead>
 ```
 
+<ClientOnly>
 <NounHeadRenderType />
+</ClientOnly>

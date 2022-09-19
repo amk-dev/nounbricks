@@ -21,7 +21,9 @@ Use this component to render a full noun
 ></FullNoun>
 ```
 
+<ClientOnly>
 <FullNounWithBackground />
+</ClientOnly>
 
 ## FullNoun without background
 
@@ -34,7 +36,9 @@ Use this component to render a full noun
 ></FullNoun>
 ```
 
+<ClientOnly>
 <FullNounWithoutBackground />
+</ClientOnly>
 
 ## FullNoun Fit Bounds
 
@@ -48,7 +52,9 @@ Use this component to render a full noun
 ></FullNoun>
 ```
 
+<ClientOnly>
 <FullNounFitBounds />
+</ClientOnly>
 
 ## FullNoun, Render as an IMG instead of SVG
 
@@ -63,4 +69,6 @@ Use this component to render a full noun
 ></FullNoun>
 ```
 
+<ClientOnly>
 <FullNounRenderType />
+</ClientOnly>

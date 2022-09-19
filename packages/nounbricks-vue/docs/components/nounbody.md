@@ -15,7 +15,9 @@ Use this component to render a noun body
 <NounBody body="blue-sky" bg-color="d5d7e1"></NounBody>
 ```
 
+<ClientOnly>
 <NounBodyWithBackground />
+</ClientOnly>
 
 ## NounBody without background
 
@@ -23,7 +25,9 @@ Use this component to render a noun body
 <NounBody body="blue-sky"></NounBody>
 ```
 
+<ClientOnly>
 <NounBodyWithoutBackground />
+</ClientOnly>
 
 ## NounBody Fit Bounds
 
@@ -31,7 +35,9 @@ Use this component to render a noun body
 <NounBody body="blue-sky" fit-to-bounds></NounBody>
 ```
 
+<ClientOnly>
 <NounBodyFitBounds />
+</ClientOnly>
 
 ## NounBody, Render as an IMG instead of SVG
 
@@ -39,4 +45,6 @@ Use this component to render a noun body
 <NounBody body="blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
 ```
 
+<ClientOnly>
 <NounBodyRenderType />
+</ClientOnly>
