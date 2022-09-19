@@ -2,6 +2,7 @@
 import NounAccessoryWithBackground from "./../examples/NounAccessoryWithBackground.vue"
 import NounAccessoryWithoutBackground from "./../examples/NounAccessoryWithoutBackground.vue"
 import NounAccessoryFitBounds from "./../examples/NounAccessoryFitBounds.vue"
+import NounAccessoryRenderType from "./../examples/NounAccessoryRenderType.vue"
 </script>
 
 # NounAccessory
@@ -31,3 +32,15 @@ Use this component to render a noun accessory
 ```
 
 <NounAccessoryFitBounds />
+
+## NounAccessory, Render as IMG instead of SVG
+
+```html
+<NounAccessory
+  accessories="bling-anvil"
+  bg-color="e1d7d5"
+  render-type="img"
+></NounAccessory>
+```
+
+<NounAccessoryRenderType />

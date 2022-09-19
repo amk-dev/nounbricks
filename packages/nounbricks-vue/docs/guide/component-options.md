@@ -29,3 +29,16 @@ normally nouns are rendered within a 320x320 square. mostly this leaves addition
     fit-to-bounds
 />
 ```
+
+## Render as an IMG or SVG
+
+you might want to render the noun as an img instead of a full svg. this helps performance when rendering a lot of nouns together. in those scenarios you can use the `renderType` prop.
+
+the default value for renderType is `svg`
+
+```vue-html
+<fullnoun
+    ...
+    renderType="img"
+/>
+```

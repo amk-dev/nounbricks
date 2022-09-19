@@ -2012,3 +2012,19 @@ export type HeadNameWithoutPrefix = TraitNameWithoutPrefix<HeadName>;
 export type BodyNameWithoutPrefix = TraitNameWithoutPrefix<BodyName>;
 export type AccessoryNameWithoutPrefix = TraitNameWithoutPrefix<AccessoryName>;
 export type GlassesNameWithoutPrefix = TraitNameWithoutPrefix<GlassesName>;
+
+export const isHeadNamePrefixed = (
+  headName: HeadName | HeadNameWithoutPrefix
+): headName is HeadName => headName.startsWith("head-");
+
+export const isBodyNamePrefixed = (
+  bodyName: BodyName | BodyNameWithoutPrefix
+): bodyName is BodyName => bodyName.startsWith("body-");
+
+export const isGlassesNamePrefixed = (
+  glassesName: GlassesName | GlassesNameWithoutPrefix
+): glassesName is GlassesName => glassesName.startsWith("glasses-");
+
+export const isAccessoryNamePrefixed = (
+  accessoryName: AccessoryName | AccessoryNameWithoutPrefix
+): accessoryName is AccessoryName => accessoryName.startsWith("accessory-");

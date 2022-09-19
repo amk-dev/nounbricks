@@ -1,5 +1,7 @@
 <template>
+  <img v-if="renderType == 'img'" :src="svg" />
   <svg
+    v-else
     :width="svgAttributes.width"
     :height="svgAttributes.height"
     :viewBox="svgAttributes.viewBox"
@@ -16,11 +18,18 @@ import { AccessoryNameWithoutPrefix, BgColor } from "../data/ImageData";
 
 import { useSvgBuilder, Traits } from "../composables/useSvgBuilder";
 
-const props = defineProps<{
-  accessories: AccessoryNameWithoutPrefix;
-  fitToBounds?: boolean;
-  bgColor?: BgColor;
-}>();
+const props = withDefaults(
+  defineProps<{
+    accessories: AccessoryNameWithoutPrefix;
+    fitToBounds?: boolean;
+    bgColor?: BgColor;
+    renderType?: "svg" | "img";
+  }>(),
+  {
+    bgColor: undefined,
+    renderType: "svg",
+  }
+);
 
 const traits: ComputedRef<Traits> = computed(() => ({
   accessory: `accessory-${props.accessories}`,
@@ -29,6 +38,7 @@ const traits: ComputedRef<Traits> = computed(() => ({
 const svgOptions = computed(() => ({
   fitToBounds: props.fitToBounds,
   bgColor: props.bgColor,
+  renderType: props.renderType,
 }));
 
 const { svg, svgAttributes } = useSvgBuilder(traits, svgOptions);

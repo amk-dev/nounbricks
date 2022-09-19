@@ -31,6 +31,7 @@ type MayBeRef<T> = Ref<T> | T;
 type SvgBuilderOptions = {
   fitToBounds?: boolean;
   bgColor?: string;
+  renderType?: "svg" | "img";
 };
 
 export const useSvgBuilder = (
@@ -97,7 +98,31 @@ export const useSvgBuilder = (
     }
   });
 
-  return { svg, svgAttributes };
+  const renderValue = computed(() => {
+    if (unref(options).renderType == "img") {
+      const blob = new Blob(
+        [
+          `<svg
+      width="${svgAttributes.value.width}"
+      height="${svgAttributes.value.height}"
+      viewBox="${svgAttributes.value.viewBox}"
+      xmlns="http://www.w3.org/2000/svg"
+      shape-rendering="crispEdges"
+      v-html="svg"
+    >${svg.value}</svg>`,
+        ],
+        {
+          type: "image/svg+xml",
+        }
+      );
+
+      return URL.createObjectURL(blob);
+    }
+
+    return svg.value;
+  });
+
+  return { svg: renderValue, svgAttributes };
 };
 
 const getHeadByName = (headName: HeadName) => {

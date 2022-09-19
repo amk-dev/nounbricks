@@ -2,6 +2,7 @@
 import FullNounWithBackground from "./../examples/FullNounWithBackground.vue"
 import FullNounWithoutBackground from "./../examples/FullNounWithoutBackground.vue"
 import FullNounFitBounds from "./../examples/FullNounFitBounds.vue"
+import FullNounRenderType from "./../examples/FullNounRenderType.vue"
 </script>
 
 # FullNoun
@@ -48,3 +49,18 @@ Use this component to render a full noun
 ```
 
 <FullNounFitBounds />
+
+## FullNoun, Render as an IMG instead of SVG
+
+```html
+<FullNoun
+  body="bege-crt"
+  head="ape"
+  accessories="bird-side"
+  glasses="square-black-rgb"
+  bg-color="d5d7e1"
+  render-type="img"
+></FullNoun>
+```
+
+<FullNounRenderType />
