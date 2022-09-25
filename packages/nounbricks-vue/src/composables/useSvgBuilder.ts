@@ -43,19 +43,6 @@ export const useSvgBuilder = (
 
     const parts: Parts = [];
 
-    if (head) {
-      const headData = getHeadByName(head);
-      if (!headData) throw new Error(`Could not find trait data for ${head}`);
-      parts.push(headData);
-    }
-
-    if (glasses) {
-      const glassesData = getGlassByName(glasses);
-      if (!glassesData)
-        throw new Error(`Could not find trait data for ${glasses}`);
-      parts.push(glassesData);
-    }
-
     if (body) {
       const bodyData = getBodyByName(body);
       if (!bodyData) throw new Error(`Could not find trait data for ${body}`);
@@ -67,6 +54,19 @@ export const useSvgBuilder = (
       if (!accessoryData)
         throw new Error(`Could not find trait data for ${accessory}`);
       parts.push(accessoryData);
+    }
+
+    if (head) {
+      const headData = getHeadByName(head);
+      if (!headData) throw new Error(`Could not find trait data for ${head}`);
+      parts.push(headData);
+    }
+
+    if (glasses) {
+      const glassesData = getGlassByName(glasses);
+      if (!glassesData)
+        throw new Error(`Could not find trait data for ${glasses}`);
+      parts.push(glassesData);
     }
 
     return parts;
