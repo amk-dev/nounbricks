@@ -14,6 +14,7 @@ export default {
           { text: "NounBody", link: "/components/nounbody" },
           { text: "NounGlasses", link: "/components/nounglasses" },
           { text: "NounAccessory", link: "/components/nounaccessory" },
+          { text: "NounBuilder", link: "/components/nounbuilder" },
         ],
       },
       {
