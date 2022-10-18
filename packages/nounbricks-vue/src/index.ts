@@ -1,30 +1,7 @@
-import FullNoun from "./components/FullNoun.vue";
-import NounBody from "./components/NounBody.vue";
-import NounHead from "./components/NounHead.vue";
-import NounAccessory from "./components/NounAccessory.vue";
-import NounGlasses from "./components/NounGlasses.vue";
-import NounBuilder from "./components/NounBuilder.vue";
+import * as traits from "@nounbricks/traits-nouns";
+import { generateCustomNounbricksComponents } from "./components/custom/getCustomNounbricksComponents";
 
-import {
-  bgColors,
-  palette,
-  heads,
-  glasses,
-  bodies,
-  accessories,
-} from "./data/ImageData";
+const { FullNoun, NounBody, NounHead, NounAccessory, NounGlasses } =
+  generateCustomNounbricksComponents(Object.values(traits));
 
-export {
-  FullNoun,
-  NounBody,
-  NounHead,
-  NounAccessory,
-  NounGlasses,
-  NounBuilder,
-  bgColors,
-  palette,
-  heads,
-  glasses,
-  bodies,
-  accessories,
-};
+export { FullNoun, NounBody, NounHead, NounAccessory, NounGlasses };

@@ -1,7 +1,7 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/vue";
 
-import NounHead from "../NounHead.vue";
+import { NounHead } from "../../index";
 
 type NounHeadProps = InstanceType<typeof NounHead>["$props"];
 
@@ -10,7 +10,7 @@ afterEach(cleanup);
 describe("NounHead", () => {
   it("renders the NounHead with background", () => {
     const props: NounHeadProps = {
-      head: "coffeebean",
+      head: "head-coffeebean",
       bgColor: "d5d7e1",
     };
 
@@ -23,7 +23,7 @@ describe("NounHead", () => {
 
   it("renders the NounHead without background", () => {
     const props: NounHeadProps = {
-      head: "coffeebean",
+      head: "head-coffeebean",
     };
 
     const { container } = render(NounHead, {
@@ -35,7 +35,7 @@ describe("NounHead", () => {
 
   it("renders with NounHead with bounds fit", () => {
     const props: NounHeadProps = {
-      head: "coffeebean",
+      head: "head-coffeebean",
       fitToBounds: true,
     };
 
