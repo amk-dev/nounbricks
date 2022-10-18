@@ -1,11 +1,11 @@
 <template>
   <NounBuilder
-    glasses="square-blue"
-    body="blue-sky"
+    glasses="glasses-square-blue"
+    body="body-blue-sky"
     fit-to-bounds
   ></NounBuilder>
 </template>
 
 <script setup lang="ts">
-import NounBuilder from "../../src/components/NounBuilder.vue";
+import { NounBuilder } from "../../src/index";
 </script>

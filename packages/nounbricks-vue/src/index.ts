@@ -1,7 +1,20 @@
 import * as traits from "@nounbricks/traits-nouns";
 import { generateCustomNounbricksComponents } from "./components/custom/getCustomNounbricksComponents";
 
-const { FullNoun, NounBody, NounHead, NounAccessory, NounGlasses } =
-  generateCustomNounbricksComponents(Object.values(traits));
+const {
+  FullNoun,
+  NounBody,
+  NounHead,
+  NounAccessory,
+  NounGlasses,
+  NounBuilder,
+} = generateCustomNounbricksComponents(Object.values(traits));
 
-export { FullNoun, NounBody, NounHead, NounAccessory, NounGlasses };
+export {
+  FullNoun,
+  NounBody,
+  NounHead,
+  NounAccessory,
+  NounGlasses,
+  NounBuilder,
+};

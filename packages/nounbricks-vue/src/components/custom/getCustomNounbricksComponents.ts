@@ -283,11 +283,85 @@ export function generateCustomNounbricksComponents<
     },
   });
 
+  const NounBuilder = defineComponent({
+    props: {
+      head: {
+        type: String as unknown as PropType<HeadName | undefined>,
+        default: undefined,
+      },
+      glasses: {
+        type: String as unknown as PropType<GlassesName | undefined>,
+        default: undefined,
+      },
+      body: {
+        type: String as unknown as PropType<BodyName | undefined>,
+        default: undefined,
+      },
+      accessory: {
+        type: String as unknown as PropType<AccessoryName | undefined>,
+        default: undefined,
+      },
+      fitToBounds: Boolean,
+      bgColor: {
+        type: String as unknown as PropType<BgColor | undefined>,
+        default: undefined,
+      },
+      renderType: {
+        type: String as unknown as PropType<"svg" | "img">,
+        default: "svg",
+      },
+    },
+    setup(props) {
+      const traitsData: ComputedRef<TraitsWithData> = computed(() => {
+        const traits: TraitsWithData = {};
+
+        if (props.head) {
+          traits["head"] = props.head as HeadName;
+        }
+
+        if (props.body) {
+          traits["body"] = props.body as BodyName;
+        }
+
+        if (props.accessory) {
+          traits["accessory"] = props.accessory as AccessoryName;
+        }
+
+        if (props.glasses) {
+          traits["glasses"] = props.glasses as GlassesName;
+        }
+
+        return traits;
+      });
+
+      const svgOptions = computed(() => ({
+        fitToBounds: props.fitToBounds,
+        bgColor: props.bgColor,
+        renderType: props.renderType,
+      }));
+
+      const { svg, svgAttributes } = useSvgBuilder<
+        HeadName,
+        BodyName,
+        GlassesName,
+        AccessoryName
+      >(traitsData.value, svgOptions, traits);
+
+      return () =>
+        h(NounRenderer, {
+          svg: svg.value,
+          svgAttributes: svgAttributes.value,
+          renderType: props.renderType,
+        });
+    },
+  });
+
   return {
     NounHead,
     NounBody,
     NounGlasses,
     NounAccessory,
     FullNoun,
+    NounBuilder,
   };
 }

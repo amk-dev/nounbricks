@@ -24,9 +24,9 @@ Import and use the components from `@nounbricks/nounbricks-vue` 🎉
 <template>
   <FullNoun
     body="bege-crt"
-    head="ape"
+    head="head-ape"
     accessories="bird-side"
-    glasses="square-black-rgb"
+    glasses="glasses-square-black-rgb"
   ></FullNoun>
 </template>
 
@@ -57,7 +57,8 @@ You can try out nounbricks components directly on the browser.
         body="bege-crt"
         head="head-bag"
         accessories="bird-side"
-        glasses="square-black-rgb"
+        glasses="glasses-square-black-rgb"
+
         bg-color="d5d7e1"
       ></FullNoun>`,
   });
@@ -288,8 +289,8 @@ Use this component to render any combination of traits on one image. for eg: you
 
 ```html
 <NounBuilder
-  head="ape"
-  glasses="square-black-rgb"
+  head="head-ape"
+  glasses="glasses-square-black-rgb"
   bg-color="d5d7e1"
 ></NounBuilder>
 ```
@@ -307,14 +308,14 @@ Use this component to render any combination of traits on one image. for eg: you
 #### FullNoun Fit Bounds
 
 ```html
-<NounBuilder glasses="square-blue" body="body-blue-sky"></NounBuilder>
+<NounBuilder glasses="glasses-square-blue" body="body-blue-sky"></NounBuilder>
 ```
 
 #### NounBuilder, Render as an IMG instead of SVG
 
 ```html
 <NounBuilder
-  glasses="square-blue"
+  glasses="glasses-square-blue"
   body="body-blue-sky"
   fit-to-bounds
   render-type="img"
