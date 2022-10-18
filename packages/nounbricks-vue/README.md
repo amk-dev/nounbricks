@@ -55,7 +55,7 @@ You can try out nounbricks components directly on the browser.
     },
     template: `<FullNoun
         body="bege-crt"
-        head="bag"
+        head="head-bag"
         accessories="bird-side"
         glasses="square-black-rgb"
         bg-color="d5d7e1"
@@ -113,10 +113,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   bg-color="d5d7e1"
 ></FullNoun>
 ```
@@ -125,10 +125,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
 ></FullNoun>
 ```
 
@@ -136,10 +136,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   fit-to-bounds
 ></FullNoun>
 ```
@@ -148,10 +148,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   bg-color="d5d7e1"
   render-type="img"
 ></FullNoun>
@@ -164,25 +164,25 @@ Use this component to render a noun head
 #### NounHead with background
 
 ```html
-<NounHead head="bag" bg-color="d5d7e1"></NounHead>
+<NounHead head="head-bag" bg-color="d5d7e1"></NounHead>
 ```
 
 #### NounHead without background
 
 ```html
-<NounHead head="bag"></NounHead>
+<NounHead head="head-bag"></NounHead>
 ```
 
 #### NounHead Fit Bounds
 
 ```html
-<NounHead head="bag" fit-to-bounds></NounHead>
+<NounHead head="head-bag" fit-to-bounds></NounHead>
 ```
 
 #### NounHead, Render as an IMG instead of SVG
 
 ```html
-<NounHead head="bag" bg-color="d5d7e1" render-type="img"></NounHead>
+<NounHead head="head-bag" bg-color="d5d7e1" render-type="img"></NounHead>
 ```
 
 ### NounGlasses
@@ -192,25 +192,29 @@ Use this component to render noun glasses
 #### NounGlasses with background
 
 ```html
-<NounGlasses body="blue-sky" bg-color="d5d7e1"></NounGlasses>
+<NounGlasses glasses="glasses-grass" bg-color="d5d7e1"></NounGlasses>
 ```
 
 #### NounGlasses without background
 
 ```html
-<NounGlasses body="blue-sky"></NounGlasses>
+<NounGlasses glasses="glasses-grass"></NounGlasses>
 ```
 
 #### NounGlasses Fit Bounds
 
 ```html
-<NounGlasses body="blue-sky" fit-to-bounds></NounGlasses>
+<NounGlasses glasses="glasses-grass" fit-to-bounds></NounGlasses>
 ```
 
 #### NounGlasses, Render as an IMG instead of SVG
 
 ```html
-<NounGlasses glasses="grass" bg-color="d5d7e1" render-type="img"></NounGlasses>
+<NounGlasses
+  glasses="glasses-grass"
+  bg-color="d5d7e1"
+  render-type="img"
+></NounGlasses>
 ```
 
 ### NounBody
@@ -220,25 +224,25 @@ Use this component to render a noun body
 #### NounBody with background
 
 ```html
-<NounBody body="blue-sky" bg-color="d5d7e1"></NounBody>
+<NounBody body="body-blue-sky" bg-color="d5d7e1"></NounBody>
 ```
 
 #### NounBody without background
 
 ```html
-<NounBody body="blue-sky"></NounBody>
+<NounBody body="body-blue-sky"></NounBody>
 ```
 
 #### NounBody Fit Bounds
 
 ```html
-<NounBody body="blue-sky" fit-to-bounds></NounBody>
+<NounBody body="body-blue-sky" fit-to-bounds></NounBody>
 ```
 
 #### NounBody, Render as an IMG instead of SVG
 
 ```html
-<NounBody body="blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
+<NounBody body="body-blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
 ```
 
 ### NounAccessory
@@ -248,26 +252,29 @@ Use this component to render a noun accessory
 #### NounAccessory with background
 
 ```html
-<NounAccessory accessories="bling-anvil" bg-color="d5d7e1"></NounAccessory>
+<NounAccessory
+  accessory="accessory-bling-anvil"
+  bg-color="d5d7e1"
+></NounAccessory>
 ```
 
 #### NounAccessory without background
 
 ```html
-<NounAccessory accessories="bling-anvil"></NounAccessory>
+<NounAccessory accessory="accessory-bling-anvil"></NounAccessory>
 ```
 
 #### NounAccessory Fit Bounds
 
 ```html
-<NounAccessory accessories="bling-anvil" fit-to-bounds></NounAccessory>
+<NounAccessory accessory="accessory-bling-anvil" fit-to-bounds></NounAccessory>
 ```
 
 #### NounAccessory, Render as an IMG instead of SVG
 
 ```html
 <NounAccessory
-  accessories="bling-anvil"
+  accessory="accessory-bling-anvil"
   bg-color="e1d7d5"
   render-type="img"
 ></NounAccessory>
@@ -292,7 +299,7 @@ Use this component to render any combination of traits on one image. for eg: you
 ```html
 <NounBuilder
   accessory="accessory-1n"
-  body="blue-sky"
+  body="body-blue-sky"
   bg-color="d5d7e1"
 ></NounBuilder>
 ```
@@ -300,7 +307,7 @@ Use this component to render any combination of traits on one image. for eg: you
 #### FullNoun Fit Bounds
 
 ```html
-<NounBuilder glasses="square-blue" body="blue-sky"></NounBuilder>
+<NounBuilder glasses="square-blue" body="body-blue-sky"></NounBuilder>
 ```
 
 #### NounBuilder, Render as an IMG instead of SVG
@@ -308,7 +315,7 @@ Use this component to render any combination of traits on one image. for eg: you
 ```html
 <NounBuilder
   glasses="square-blue"
-  body="blue-sky"
+  body="body-blue-sky"
   fit-to-bounds
   render-type="img"
 ></NounBuilder>

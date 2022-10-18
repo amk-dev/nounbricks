@@ -12,7 +12,7 @@ Use this component to render noun glasses
 ## NounGlasses with background
 
 ```html
-<NounGlasses body="blue-sky" bg-color="d5d7e1"></NounGlasses>
+<NounGlasses glasses="glasses-grass" bg-color="d5d7e1"></NounGlasses>
 ```
 
 <ClientOnly>
@@ -22,7 +22,7 @@ Use this component to render noun glasses
 ## NounGlasses without background
 
 ```html
-<NounGlasses body="blue-sky"></NounGlasses>
+<NounGlasses glasses="glasses-grass"></NounGlasses>
 ```
 
 <ClientOnly>
@@ -32,7 +32,7 @@ Use this component to render noun glasses
 ## NounGlasses Fit Bounds
 
 ```html
-<NounGlasses body="blue-sky" fit-to-bounds></NounGlasses>
+<NounGlasses glasses="glasses-grass" fit-to-bounds></NounGlasses>
 ```
 
 <ClientOnly>
@@ -42,7 +42,11 @@ Use this component to render noun glasses
 ## NounGlasses, Render as IMG instead of SVG
 
 ```html
-<NounGlasses glasses="grass" bg-color="d5d7e1" render-type="img"></NounGlasses>
+<NounGlasses
+  glasses="glasses-grass"
+  bg-color="d5d7e1"
+  render-type="img"
+></NounGlasses>
 ```
 
 <ClientOnly>

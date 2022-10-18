@@ -57,7 +57,7 @@ You can try out nounbricks components directly on the browser.
     },
     template: `<FullNoun
         body="bege-crt"
-        head="bag"
+        head="head-bag"
         accessories="bird-side"
         glasses="square-black-rgb"
         bg-color="d5d7e1"

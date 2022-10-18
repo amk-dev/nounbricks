@@ -13,10 +13,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   bg-color="d5d7e1"
 ></FullNoun>
 ```
@@ -29,10 +29,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
 ></FullNoun>
 ```
 
@@ -44,10 +44,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   fit-to-bounds
 ></FullNoun>
 ```
@@ -60,10 +60,10 @@ Use this component to render a full noun
 
 ```html
 <FullNoun
-  body="bege-crt"
-  head="ape"
-  accessories="bird-side"
-  glasses="square-black-rgb"
+  body="body-bege-crt"
+  head="head-ape"
+  accessory="accessory-bird-side"
+  glasses="glasses-square-black-rgb"
   bg-color="d5d7e1"
   render-type="img"
 ></FullNoun>

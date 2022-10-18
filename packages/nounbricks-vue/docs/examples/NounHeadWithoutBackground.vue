@@ -1,7 +1,7 @@
 <template>
-  <NounHead head="bag"></NounHead>
+  <NounHead head="head-bag"></NounHead>
 </template>
 
 <script setup lang="ts">
-import NounHead from "../../src/components/NounHead.vue";
+import { NounHead } from "../../src/index";
 </script>

@@ -32,7 +32,7 @@ Use this component to render any combination of traits on one image. for eg: you
 ```html
 <NounBuilder
   accessory="accessory-1n"
-  body="blue-sky"
+  body="body-blue-sky"
   bg-color="d5d7e1"
 ></NounBuilder>
 ```
@@ -44,7 +44,7 @@ Use this component to render any combination of traits on one image. for eg: you
 ## FullNoun Fit Bounds
 
 ```html
-<NounBuilder glasses="square-blue" body="blue-sky"></NounBuilder>
+<NounBuilder glasses="square-blue" body="body-blue-sky"></NounBuilder>
 ```
 
 <ClientOnly>
@@ -56,7 +56,7 @@ Use this component to render any combination of traits on one image. for eg: you
 ```html
 <NounBuilder
   glasses="square-blue"
-  body="blue-sky"
+  body="body-blue-sky"
   fit-to-bounds
   render-type="img"
 ></NounBuilder>

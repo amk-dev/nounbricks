@@ -12,7 +12,7 @@ Use this component to render a noun head
 ## NounHead with background
 
 ```html
-<NounHead head="bag" bg-color="d5d7e1"></NounHead>
+<NounHead head="head-bag" bg-color="d5d7e1"></NounHead>
 ```
 
 <ClientOnly>
@@ -22,7 +22,7 @@ Use this component to render a noun head
 ## NounHead without background
 
 ```html
-<NounHead head="bag"></NounHead>
+<NounHead head="head-bag"></NounHead>
 ```
 
 <ClientOnly>
@@ -32,7 +32,7 @@ Use this component to render a noun head
 ## NounHead Fit Bounds
 
 ```html
-<NounHead head="bag" fit-to-bounds></NounHead>
+<NounHead head="head-bag" fit-to-bounds></NounHead>
 ```
 
 <ClientOnly>
@@ -42,7 +42,7 @@ Use this component to render a noun head
 ## NounHead, Render as an IMG instead of SVG
 
 ```html
-<NounHead head="bag" bg-color="d5d7e1" render-type="img"></NounHead>
+<NounHead head="head-bag" bg-color="d5d7e1" render-type="img"></NounHead>
 ```
 
 <ClientOnly>

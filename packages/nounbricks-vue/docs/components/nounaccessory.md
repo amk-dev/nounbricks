@@ -12,7 +12,10 @@ Use this component to render a noun accessory
 ## NounAccessory with background
 
 ```html
-<NounAccessory accessories="bling-anvil" bg-color="d5d7e1"></NounAccessory>
+<NounAccessory
+  accessory="accessory-bling-anvil"
+  bg-color="d5d7e1"
+></NounAccessory>
 ```
 
 <ClientOnly>
@@ -22,7 +25,7 @@ Use this component to render a noun accessory
 ## NounAccessory without background
 
 ```html
-<NounAccessory accessories="bling-anvil"></NounAccessory>
+<NounAccessory accessory="accessory-bling-anvil"></NounAccessory>
 ```
 
 <ClientOnly>
@@ -32,7 +35,7 @@ Use this component to render a noun accessory
 ## NounAccessory Fit Bounds
 
 ```html
-<NounAccessory accessories="bling-anvil" fit-to-bounds></NounAccessory>
+<NounAccessory accessory="accessory-bling-anvil" fit-to-bounds></NounAccessory>
 ```
 
 <ClientOnly>
@@ -43,7 +46,7 @@ Use this component to render a noun accessory
 
 ```html
 <NounAccessory
-  accessories="bling-anvil"
+  accessory="accessory-bling-anvil"
   bg-color="e1d7d5"
   render-type="img"
 ></NounAccessory>
