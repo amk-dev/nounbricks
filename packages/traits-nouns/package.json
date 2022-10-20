@@ -1,6 +1,6 @@
 {
   "name": "@nounbricks/traits-nouns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nouns assets to be used with @nounbricks/nounbricks-vue",
   "module": "./dist/index.es.js",
   "repository": {
@@ -8,15 +8,44 @@
     "url": "https://github.com/amk-dev/nounbricks.git"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.es.js"
+    ".": "./dist/index.es.js",
+    "./heads": "./dist/heads.es.js",
+    "./bodies": "./dist/bodies.es.js",
+    "./accessories": "./dist/accessories.es.js",
+    "./glasses": "./dist/glasses.es.js",
+    "./bgColors": "./dist/bgColors.es.js",
+    "./palette": "./dist/palette.es.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.ts"
+      ],
+      "heads": [
+        "dist/heads.d.ts"
+      ],
+      "bodies": [
+        "dist/bodies.d.ts"
+      ],
+      "glasses": [
+        "dist/glasses.d.ts"
+      ],
+      "accessories": [
+        "dist/accessories.d.ts"
+      ],
+      "bgColors": [
+        "dist/bgColors.d.ts"
+      ],
+      "palette": [
+        "dist/palette.d.ts"
+      ]
     }
   },
-  "types": "dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "build": "vite build --mode prod && tsc --declaration --declarationDir dist/types --emitDeclarationOnly",
+    "build": "rimraf ./dist && node ./scripts/build-all.js && tsc --declaration --declarationDir dist --emitDeclarationOnly",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.vue, --ignore-path ./../../.gitignore ./src",
     "format": "prettier --ignore-path ./../../.gitignore ./src --check"
