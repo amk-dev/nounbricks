@@ -11,7 +11,7 @@ export function generateCustomNounbricksComponents<
     filename: `${PossibleTraitType}-${string}`;
     data: string;
   }
->(traits: T[]) {
+>(traits: T[], palette: string[]) {
   type GetTraitNamesWithNever<
     Traits extends { filename: string; data: string }[],
     TraitType extends "head" | "body" | "accessory" | "glasses"
@@ -77,7 +77,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {
@@ -122,7 +122,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {
@@ -167,7 +167,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {
@@ -212,7 +212,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {
@@ -272,7 +272,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {
@@ -345,7 +345,7 @@ export function generateCustomNounbricksComponents<
         BodyName,
         GlassesName,
         AccessoryName
-      >(traitsData.value, svgOptions, traits);
+      >(traitsData.value, svgOptions, traits, palette);
 
       return () =>
         h(NounRenderer, {

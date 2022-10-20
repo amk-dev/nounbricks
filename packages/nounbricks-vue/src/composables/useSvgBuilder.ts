@@ -1,9 +1,7 @@
 import { buildSVG, calculateBounds } from "../utils/SvgBuilder";
-import { palette } from "../data/ImageData";
 
 import { computed, unref, Ref } from "vue";
 
-type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 type MayBeRef<T> = Ref<T> | T;
 
 type PossibleTraitType = "head" | "body" | "glasses" | "accessory";
@@ -30,7 +28,8 @@ export const useSvgBuilder = <
   traitsData: {
     filename: `${PossibleTraitType}-${string}`;
     data: string;
-  }[]
+  }[],
+  palette: string[]
 ) => {
   const getTraitByName = (traitName: string) =>
     traitsData.find((trait) => trait.filename === traitName);
@@ -72,11 +71,7 @@ export const useSvgBuilder = <
   });
 
   const svg = computed(() =>
-    buildSVG(
-      parts.value,
-      palette as Writeable<typeof palette>,
-      unref(options).bgColor
-    )
+    buildSVG(parts.value, palette, unref(options).bgColor)
   );
 
   const svgAttributes = computed(() => {

@@ -50,6 +50,6 @@
     "name": "Akash K"
   },
   "dependencies": {
-    "@nounbricks/traits-nouns": "^0.0.1"
+    "@nounbricks/traits-nouns": "^0.0.2"
   }
 }
