@@ -1,19 +1,19 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/vue";
 
-import FullNoun from "../FullNoun.vue";
+import { FullNoun } from "./../../index";
 
 type FullNounProps = InstanceType<typeof FullNoun>["$props"];
 
 afterEach(cleanup);
 
-describe("FullNoun", () => {
+describe.only("FullNoun", () => {
   it("renders the FullNoun with background", () => {
     const props: FullNounProps = {
-      head: "coffeebean",
-      body: "bluegrey",
-      accessories: "belly-chameleon",
-      glasses: "square-black-rgb",
+      head: "head-coffeebean",
+      body: "body-bluegrey",
+      accessory: "accessory-belly-chameleon",
+      glasses: "glasses-square-black-rgb",
       bgColor: "d5d7e1",
     };
 
@@ -26,10 +26,10 @@ describe("FullNoun", () => {
 
   it("renders the FullNoun without background", () => {
     const props: FullNounProps = {
-      head: "coffeebean",
-      body: "bluegrey",
-      accessories: "belly-chameleon",
-      glasses: "square-black-rgb",
+      head: "head-coffeebean",
+      body: "body-bluegrey",
+      accessory: "accessory-belly-chameleon",
+      glasses: "glasses-square-black-rgb",
     };
 
     const { container } = render(FullNoun, {
@@ -41,10 +41,10 @@ describe("FullNoun", () => {
 
   it("renders with Fullnoun with bounds fit", () => {
     const props: FullNounProps = {
-      head: "coffeebean",
-      body: "bluegrey",
-      accessories: "belly-chameleon",
-      glasses: "square-black-rgb",
+      head: "head-coffeebean",
+      body: "body-bluegrey",
+      accessory: "accessory-belly-chameleon",
+      glasses: "glasses-square-black-rgb",
       fitToBounds: true,
     };
 

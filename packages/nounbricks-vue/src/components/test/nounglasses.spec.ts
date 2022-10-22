@@ -1,7 +1,7 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/vue";
 
-import NounGlasses from "../NounGlasses.vue";
+import { NounGlasses } from "../../index";
 
 type NounGlassesProps = InstanceType<typeof NounGlasses>["$props"];
 
@@ -10,7 +10,7 @@ afterEach(cleanup);
 describe("NounGlasses", () => {
   it("renders the NounGlasses with background", () => {
     const props: NounGlassesProps = {
-      glasses: "square-black-rgb",
+      glasses: "glasses-square-black-rgb",
       bgColor: "d5d7e1",
     };
 
@@ -23,7 +23,7 @@ describe("NounGlasses", () => {
 
   it("renders the NounGlasses without background", () => {
     const props: NounGlassesProps = {
-      glasses: "square-black-rgb",
+      glasses: "glasses-square-black-rgb",
     };
 
     const { container } = render(NounGlasses, {
@@ -35,7 +35,7 @@ describe("NounGlasses", () => {
 
   it("renders with NounGlasses with bounds fit", () => {
     const props: NounGlassesProps = {
-      glasses: "square-black-rgb",
+      glasses: "glasses-square-black-rgb",
       fitToBounds: true,
     };
 

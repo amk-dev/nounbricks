@@ -4,10 +4,10 @@
       <div class="nb-custom-home-hero-container">
         <FullNoun
           class="hero-noun-image"
-          body="bege-crt"
-          head="ape"
-          accessories="bird-side"
-          glasses="square-black-rgb"
+          body="body-bege-crt"
+          head="head-ape"
+          accessory="accessory-bird-side"
+          glasses="glasses-square-black-rgb"
           fit-to-bounds
         ></FullNoun>
 
@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
-import FullNoun from "./../../../src/components/FullNoun.vue";
+import { FullNoun } from "./../../../src/index";
 
 import VPButton from "./VPButton.vue";
 

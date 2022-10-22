@@ -1,32 +1,10 @@
 import { buildSVG, calculateBounds } from "../utils/SvgBuilder";
-import {
-  accessories,
-  AccessoryName,
-  bodies,
-  BodyName,
-  glasses,
-  GlassesName,
-  HeadName,
-  heads,
-  palette,
-} from "../data/ImageData";
 
 import { computed, unref, Ref } from "vue";
 
-type Parts = {
-  filename: HeadName | GlassesName | BodyName | AccessoryName;
-  data: string;
-}[];
-
-export type Traits = {
-  head?: HeadName;
-  glasses?: GlassesName;
-  body?: BodyName;
-  accessory?: AccessoryName;
-};
-
-type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 type MayBeRef<T> = Ref<T> | T;
+
+type PossibleTraitType = "head" | "body" | "glasses" | "accessory";
 
 type SvgBuilderOptions = {
   fitToBounds?: boolean;
@@ -34,36 +12,56 @@ type SvgBuilderOptions = {
   renderType?: "svg" | "img";
 };
 
-export const useSvgBuilder = (
-  traits: MayBeRef<Traits>,
-  options: MayBeRef<SvgBuilderOptions>
+export const useSvgBuilder = <
+  HeadName extends string,
+  BodyName extends string,
+  GlassesName extends string,
+  AccessoryName extends string
+>(
+  traits: MayBeRef<{
+    head?: HeadName;
+    body?: BodyName;
+    accessory?: AccessoryName;
+    glasses?: GlassesName;
+  }>,
+  options: MayBeRef<SvgBuilderOptions>,
+  traitsData: {
+    filename: `${PossibleTraitType}-${string}`;
+    data: string;
+  }[],
+  palette: string[]
 ) => {
+  const getTraitByName = (traitName: string) =>
+    traitsData.find((trait) => trait.filename === traitName);
+
   const parts = computed(() => {
     const { head, glasses, body, accessory } = unref(traits);
 
-    const parts: Parts = [];
+    const parts: {
+      data: string;
+    }[] = [];
 
     if (body) {
-      const bodyData = getBodyByName(body);
+      const bodyData = getTraitByName(body);
       if (!bodyData) throw new Error(`Could not find trait data for ${body}`);
       parts.push(bodyData);
     }
 
     if (accessory) {
-      const accessoryData = getAccessoryByName(accessory);
+      const accessoryData = getTraitByName(accessory);
       if (!accessoryData)
         throw new Error(`Could not find trait data for ${accessory}`);
       parts.push(accessoryData);
     }
 
     if (head) {
-      const headData = getHeadByName(head);
+      const headData = getTraitByName(head);
       if (!headData) throw new Error(`Could not find trait data for ${head}`);
       parts.push(headData);
     }
 
     if (glasses) {
-      const glassesData = getGlassByName(glasses);
+      const glassesData = getTraitByName(glasses);
       if (!glassesData)
         throw new Error(`Could not find trait data for ${glasses}`);
       parts.push(glassesData);
@@ -73,11 +71,7 @@ export const useSvgBuilder = (
   });
 
   const svg = computed(() =>
-    buildSVG(
-      parts.value,
-      palette as Writeable<typeof palette>,
-      unref(options).bgColor
-    )
+    buildSVG(parts.value, palette, unref(options).bgColor)
   );
 
   const svgAttributes = computed(() => {
@@ -123,20 +117,4 @@ export const useSvgBuilder = (
   });
 
   return { svg: renderValue, svgAttributes };
-};
-
-const getHeadByName = (headName: HeadName) => {
-  return heads.find((head) => head.filename === headName);
-};
-
-const getBodyByName = (bodyName: BodyName) => {
-  return bodies.find((body) => body.filename === bodyName);
-};
-
-const getAccessoryByName = (accessoryName: AccessoryName) => {
-  return accessories.find((accessory) => accessory.filename === accessoryName);
-};
-
-const getGlassByName = (glassName: GlassesName) => {
-  return glasses.find((glass) => glass.filename === glassName);
 };

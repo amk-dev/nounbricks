@@ -12,7 +12,7 @@ Use this component to render a noun body
 ## NounBody with background
 
 ```html
-<NounBody body="blue-sky" bg-color="d5d7e1"></NounBody>
+<NounBody body="body-blue-sky" bg-color="d5d7e1"></NounBody>
 ```
 
 <ClientOnly>
@@ -22,7 +22,7 @@ Use this component to render a noun body
 ## NounBody without background
 
 ```html
-<NounBody body="blue-sky"></NounBody>
+<NounBody body="body-blue-sky"></NounBody>
 ```
 
 <ClientOnly>
@@ -32,7 +32,7 @@ Use this component to render a noun body
 ## NounBody Fit Bounds
 
 ```html
-<NounBody body="blue-sky" fit-to-bounds></NounBody>
+<NounBody body="body-blue-sky" fit-to-bounds></NounBody>
 ```
 
 <ClientOnly>
@@ -42,7 +42,7 @@ Use this component to render a noun body
 ## NounBody, Render as an IMG instead of SVG
 
 ```html
-<NounBody body="blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
+<NounBody body="body-blue-sky" bg-color="d5d7e1" render-type="img"></NounBody>
 ```
 
 <ClientOnly>

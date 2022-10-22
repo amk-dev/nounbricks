@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/vue";
-import NounBody from "../NounBody.vue";
+import { NounBody } from "./../../index";
 
 type NounBodyProps = InstanceType<typeof NounBody>["$props"];
 
@@ -9,7 +9,7 @@ afterEach(cleanup);
 describe("NounBody", () => {
   it("renders the NounBody with background", () => {
     const props: NounBodyProps = {
-      body: "bluegrey",
+      body: "body-bluegrey",
       bgColor: "d5d7e1",
     };
 
@@ -22,7 +22,7 @@ describe("NounBody", () => {
 
   it("renders the NounBody without background", () => {
     const props: NounBodyProps = {
-      body: "bluegrey",
+      body: "body-bluegrey",
     };
 
     const { container } = render(NounBody, {
@@ -34,7 +34,7 @@ describe("NounBody", () => {
 
   it("renders the NounBody with bounds fit", () => {
     const props: NounBodyProps = {
-      body: "bluegrey",
+      body: "body-bluegrey",
       fitToBounds: true,
     };
 

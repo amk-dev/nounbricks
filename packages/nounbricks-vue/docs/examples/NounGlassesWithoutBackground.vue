@@ -1,7 +1,7 @@
 <template>
-  <NounGlasses glasses="grass"></NounGlasses>
+  <NounGlasses glasses="glasses-grass"></NounGlasses>
 </template>
 
 <script setup lang="ts">
-import NounGlasses from "../../src/components/NounGlasses.vue";
+import { NounGlasses } from "../../src/index";
 </script>
